@@ -1,0 +1,7 @@
+.simple-card {
+    height: 20rem;
+    width: 16rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 2px 2px 15px hsl(0, 0%, 0%, 0.2);
+}

@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Rating from './components/Rating.jsx';
+import SimpleCard from './components/Cards/simpleCard/SimpleCard';
+import FlippingCard from './components/Cards/3dFlippingCard/FlippingCard';
 
 function App() {
+  const click = () => {
+    alert("Clicked!")
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SimpleCard width="30rem">
+        <Rating size='50'/>
+      </SimpleCard>
+      <FlippingCard width='30rem' front={<Rating size='50'/>} back={<Rating size='50'/>}></FlippingCard>
     </div>
   );
 }
